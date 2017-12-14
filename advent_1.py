@@ -7,7 +7,7 @@ tests = {
     }
 
 def solve(digits):
-    digits += digits[0]
+    digits += digits[0]     # handle circular digit list
     return sum(int(a) for a, b in zip(digits, digits[1:]) if a == b)
 
 for digits in tests:
