@@ -1,11 +1,11 @@
 test_data = ['5 1 9 5', '7 5 3', '2 4 6 8',]
 
 def checksum(sequence):
-    row_diffs = []
+    checksum = 0
     for line in sequence:
         row = [int(s) for s in line.strip().split()]
-        row_diffs.append(max(row) - min(row))
-    return sum(row_diffs)
+        checksum += (max(row) - min(row))
+    return checksum
 
 assert checksum(test_data) == 18
 
